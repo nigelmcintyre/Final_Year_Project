@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nigelmcintyre.login"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ntr_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.Light" >
+        <activity android:name="nigelmcintyre.login.Login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="nigelmcintyre.login.register" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.MainActivity_Homepage" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.addMeal" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.addWorkout" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.addFood" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.addExercise" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.calculateBMR" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.addNewFood" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.editFood" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.viewPastMeals" >
+        </activity>
+        <activity android:name="nigelmcintyre.login.viewPastWorkouts" >
+        </activity>
+    </application>
+
+</manifest>

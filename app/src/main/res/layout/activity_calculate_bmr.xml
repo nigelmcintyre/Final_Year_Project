@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="nigelmcintyre.login.calculateCalories">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Calculate your daily calories"
+        android:id="@+id/txtBMITitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/pleaseEnter"
+                android:id="@+id/txtEnterDetails"
+                android:layout_alignLeft="@+id/inputHeight"
+                android:layout_alignStart="@+id/inputHeight" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputAge"
+                android:layout_below="@+id/txtEnterDetails"
+                android:layout_marginLeft="30dp"
+                android:width="300dp"
+                android:hint="Age" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputHeight"
+                android:width="300dp"
+                android:hint="@string/inputHeightInCm"
+                android:layout_below="@+id/txtEnterDetails"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="44dp" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputWeight"
+                android:hint="@string/inputWeightInCm"
+                android:layout_marginLeft="30dp"
+                android:width="300dp"
+                android:inputType="text"
+                android:layout_below="@+id/inputHeight"
+                android:layout_centerHorizontal="true" />
+
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/inputWeight"
+                android:id="@+id/radioGroup">
+
+
+                <RadioButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="50dp"
+                    android:text="@string/maleRadio"
+                    android:id="@+id/rdoMale" />
+
+                <RadioButton
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="-32dp"
+                    android:text="@string/femaleRadio"
+                    android:id="@+id/rdoFemale" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/activityLeveltxt"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/calcedBmr"
+                android:layout_alignLeft="@+id/inputWeight"
+                android:layout_alignStart="@+id/inputWeight" />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:id="@+id/activityGroup"
+                android:layout_below="@+id/calcedBmr"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <RadioButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Sedentary"
+                    android:id="@+id/rdoSedentary"
+                    android:layout_alignLeft="@+id/inputHeight" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desk job, excercise 3 times per week or less"
+                    android:id="@+id/textSedentary"
+                    android:layout_below="@+id/rdoSedentary"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Lightly Active"
+                    android:id="@+id/rdoLightly"
+                    android:layout_below="@+id/textSedentary"
+                    android:layout_alignLeft="@+id/inputHeight" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="On your feet most of the day, excercise 3 times per week"
+                    android:id="@+id/textLightly"
+                    android:layout_below="@+id/rdoLightly"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Moderately Active"
+                    android:id="@+id/rdoModerately"
+                    android:layout_below="@+id/textLightly"
+                    android:layout_alignLeft="@+id/inputHeight" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active job(teacher), excercise 3 times per week or more"
+                    android:id="@+id/textModerately"
+                    android:layout_below="@+id/rdoModerately"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Very Active"
+                    android:id="@+id/rdoVery"
+                    android:layout_below="@+id/textModerately"
+                    android:layout_alignLeft="@+id/inputHeight" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Very active job(postman), excercise 5 times a week or more"
+                    android:id="@+id/textVery"
+                    android:layout_below="@+id/rdoVery"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Extreamely Active"
+                    android:id="@+id/rdoExtreamely"
+                    android:layout_below="@+id/textVery"
+                    android:layout_alignLeft="@+id/inputHeight" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textExtreamely"
+                    android:text="Exctremely active job(labourer), excercise 6 days a week or more"
+                    android:layout_below="@+id/rdoExtreamely"
+                    />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate BMR"
+                android:id="@+id/btnCalcBmr"
+                android:layout_below="@id/radioGroup"
+                android:layout_centerHorizontal="true"
+                android:onClick="calBmr" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textBMR"
+                android:text="BMR is the number of calories your body burns at rest"
+                android:layout_below="@id/btnCalcBmr"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Your basal meatabolic rate is:"
+                android:id="@+id/tvBmr"
+                android:layout_marginLeft="0dp"
+                android:layout_below="@id/textBMR"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginTop="315dp"
+                android:id="@+id/calcedBmr"
+                android:layout_marginLeft="160dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@id/activityGroup"
+
+                android:text="@string/selectGoalTxt"
+                android:id="@+id/txtEnterGoal"
+
+                android:layout_centerHorizontal="true" />
+
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txtEnterGoal"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/goalGroup">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/looseTxtRadio"
+                    android:id="@+id/rdoLoose"
+                    android:layout_below="@+id/rdoVery"
+                    android:layout_alignLeft="@+id/inputHeight" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Maintain weight"
+                    android:id="@+id/rdoMaintain"
+                    android:layout_below="@+id/rdoLoose"
+                    android:layout_alignLeft="@+id/inputHeight" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Gain weight"
+                    android:id="@+id/rdoGain"
+                    android:layout_below="@+id/rdoMaintain"
+                    android:layout_alignLeft="@+id/inputHeight" />
+
+
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Please enter percentage of calories from carbs fats and protein you would like"
+                android:id="@+id/txtEnterPercentage"
+                android:layout_below="@id/goalGroup"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Carbs    Fats    Protein"
+                android:id="@+id/txtPercentage"
+                android:layout_below="@id/txtEnterPercentage"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputCarbs"
+                android:layout_marginLeft="55dp"
+                android:width="50dp"
+                android:inputType="text"
+                android:layout_below="@+id/txtPercentage" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputFats"
+                android:layout_marginLeft="80dp"
+                android:width="50dp"
+                android:inputType="text"
+                android:layout_below="@+id/txtPercentage"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputProtein"
+                android:layout_marginLeft="220dp"
+                android:width="50dp"
+                android:inputType="text"
+                android:layout_below="@+id/txtPercentage" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate TDEE"
+                android:id="@+id/btnCalcTdee"
+                android:onClick="calcButtonClick"
+                android:layout_below="@id/inputCarbs"
+                android:layout_centerHorizontal="true" />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

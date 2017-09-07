@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="nigelmcintyre.login.register">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/registerTitle"
+        android:id="@+id/textRegister"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputFirstName"
+        android:width="300dp"
+        android:inputType="text"
+        android:hint="@string/firstNameHint"
+        android:layout_below="@+id/textRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputSurname"
+        android:layout_below="@+id/inputFirstName"
+        android:layout_alignLeft="@+id/inputFirstName"
+        android:layout_alignStart="@+id/inputFirstName"
+        android:layout_marginTop="30dp"
+        android:hint="@string/surnameHint"
+        android:width="300dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputEmail"
+        android:width="300dp"
+        android:hint="@string/hintEmail"
+        android:inputType="textEmailAddress"
+
+        android:layout_below="@+id/inputSurname"
+        android:layout_alignLeft="@+id/inputSurname"
+        android:layout_alignStart="@+id/inputSurname"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputPassword"
+        android:width="300dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/inputEmail"
+        android:layout_alignLeft="@+id/inputEmail"
+        android:layout_alignStart="@+id/inputEmail"
+
+        android:hint="@string/passwordHint"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputRetypePassword"
+        android:layout_below="@+id/inputPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:width="300dp"
+        android:hint="@string/retypePasswordhint"
+        android:inputType="textPassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="@string/registerButtonText"
+        android:id="@+id/btnRegister"
+        android:width="300dp"
+        android:onClick="onSignUpClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/inputRetypePassword"
+        android:layout_alignStart="@+id/inputRetypePassword" />
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Nigel/Desktop/FYP/23-03-16-12pm/app/src/main/res/layout/activity_register.xml -->

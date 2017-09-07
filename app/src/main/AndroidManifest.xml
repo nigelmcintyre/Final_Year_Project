@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nigelmcintyre.login" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ntr_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.Light" >
+        <activity android:name=".Login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".register" >
+        </activity>
+        <activity android:name=".MainActivity_Homepage" >
+        </activity>
+        <activity android:name=".addMeal" >
+        </activity>
+        <activity android:name=".addWorkout" >
+        </activity>
+        <activity android:name=".addFood" >
+        </activity>
+        <activity android:name=".addExercise" >
+        </activity>
+        <activity android:name=".calculateBMR" >
+        </activity>
+        <activity android:name=".addNewFood" >
+        </activity>
+        <activity android:name=".editFood" >
+        </activity>
+        <activity android:name=".viewPastMeals" >
+        </activity>
+        <activity android:name=".viewPastWorkouts" >
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+</manifest>

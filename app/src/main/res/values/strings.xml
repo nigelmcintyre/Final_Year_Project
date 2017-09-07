@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">NTR</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="inptEmail">inptEmail</string>
+    <string name="signUpButtonText">SignUp</string>
+    <string name="loginButtonText">Sign In</string>
+    <string name="loginText">Login</string>
+    <string name="passwordHint">Password</string>
+    <string name="emailHint">Email</string>
+    <string name="loggedInText">Successfully logged in</string>
+    <string name="registerTitle">Register</string>
+    <string name="firstNameHint">First Name</string>
+    <string name="surnameHint">Surname</string>
+    <string name="hintEmail">Email</string>
+    <string name="retypePasswordhint">Retype Password</string>
+    <string name="registerButtonText">Register</string>
+    <string name="emptyString" />
+    <string name="addFoodText">ADD Food</string>
+    <string name="addFoodBtn">ADD</string>
+    <string name="homepageTxt">Homepage</string>
+    <string name="addMealTxt">ADD Meal</string>
+    <string name="addWorkoutTxt">ADD Workout</string>
+    <string name="addWorkoutButtontxt">ADD</string>
+    <string name="addMealPageTxt">Add Meal</string>
+    <string name="addWorkoutPageTxt">ADD Workout</string>
+    <string name="addFoodButton">ADD</string>
+    <string name="addFoodTitleTxt">Add New Food</string>
+    <string name="addButtontxt">ADD</string>
+    <string name="inputWeight">Weight</string>
+    <string name="BMRtitle">Calculate BMI</string>
+    <string name="inputHeight">Height</string>
+    <string name="maleRadio">Male</string>
+    <string name="femaleRadio">Female</string>
+    <string name="inputHeightInCm">Height in cm</string>
+    <string name="inputWeightInCm">Weight in kg</string>
+    <string name="pleaseEnter">Please enter your:</string>
+    <string name="selectGoalTxt">Please select goal</string>
+    <string name="activityLeveltxt">Activity Level</string>
+    <string name="looseTxtRadio">Loose Weight</string>
+    <string name="addMealText">Add Meal</string>
+    <string name="addWorkoutText">Add Workout</string>
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >Edit Info</item>
+        <item >Add Workout</item>
+        <item >Add Meal</item>
+        <item >Add Food</item>
+        <item >Add Excercise</item>
+    </string-array>
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/statistic</item>
+        <item>@drawable/dumbbell</item>
+        <item>@drawable/banana</item>
+        <item>@drawable/banana</item>
+        <item>@drawable/dumbbell</item>
+    </array>
+    <string name="desc_list_item_icon">Item Icon</string>
+</resources>

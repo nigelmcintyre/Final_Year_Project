@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item android:id="@+id/action_home"
+
+        android:title="Home"
+        app:showAsAction="always"
+        />
+    <!-- Search Widget -->
+    <item android:id="@+id/action_logout"
+
+          android:title="Logout"
+          app:showAsAction="never"
+          />
+
+    <!-- Location Found -->
+    <item android:id="@+id/action_editpersonal"
+          android:title="Edit Personal Info"
+          app:showAsAction="never" />
+    
+
+</menu>
+<!-- From: file:/C:/Users/Nigel/Desktop/FYP/23-03-16-12pm/app/src/main/res/menu/activity_main_actions.xml -->

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="nigelmcintyre.login.addFood"
+    android:id="@+id/ig">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/addFoodTitleTxt"
+        android:id="@+id/addFoodTxt"
+        android:layout_below="@+id/txtMealName"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtMealName"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp">
+
+
+
+        <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchFoods"
+        android:width="200dp"
+        android:hint="food name"
+        android:layout_above="@+id/tvSearchedFood"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="search"
+        android:id="@+id/btnSearch"
+        android:onClick="searchButtonClicked"
+        android:layout_below="@+id/btnAddNewFood"
+        android:layout_toRightOf="@+id/addFoodTxt"
+        android:layout_toEndOf="@+id/addFoodTxt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="150dp"
+        android:id="@+id/linearLayout">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvSearchedFood"
+        android:onClick="searchedFoodClicked"
+        android:textSize="18sp"
+
+
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:text="Carbs"
+        android:textSize="18sp"
+        android:layout_below="@+id/btnSearch"
+        android:layout_toRightOf="@+id/txtMealName"
+        android:layout_toEndOf="@+id/txtMealName"
+        android:layout_marginLeft="80dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView10"
+        android:text="Fats"
+        android:layout_below="@+id/btnSearch"
+        android:layout_toRightOf="@+id/addFoodTxt"
+        android:layout_toEndOf="@+id/addFoodTxt"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView11"
+        android:text="Protein"
+        android:layout_below="@+id/btnSearch"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvCarbs"
+        android:textSize="18sp"
+
+        android:layout_alignTop="@+id/tvSearchedFood"
+        android:layout_alignRight="@+id/btnAddNewFood"
+        android:layout_alignEnd="@+id/btnAddNewFood"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="-175dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvFats"
+        android:textSize="18sp"
+
+        android:layout_alignTop="@+id/tvCarbs"
+        android:layout_alignRight="@+id/textView10"
+        android:layout_alignEnd="@+id/textView10"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvProtein"
+        android:textSize="18sp"
+
+        android:layout_alignTop="@+id/tvFats"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodInMeal"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:id="@+id/btnAddNewFood"
+            android:onClick="addNewFood"
+            android:layout_below="@+id/addFoodTxt"
+            android:layout_alignRight="@+id/textView9"
+            android:layout_alignEnd="@+id/textView9" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="edit/delete"
+            android:id="@+id/button"
+            android:onClick="editDeleteClick"
+            android:layout_marginLeft="92dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="40dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textTotalForMeal"
+        android:text="Total for meal:"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/totCals"
+            android:textSize="18sp"
+
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="-130dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/totalCarbs"
+            android:textSize="18sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="60dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/totalFats"
+            android:textSize="18sp"
+
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/totalProtein"
+            android:textSize="18sp"
+
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Nigel/Desktop/FYP/23-03-16-12pm/app/src/main/res/layout/activity_add_food.xml -->
